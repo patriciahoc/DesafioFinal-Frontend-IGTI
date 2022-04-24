@@ -1,0 +1,21 @@
+<div class="header">
+  <mat-toolbar color="primary">
+    <span>Acompanhar Pedido</span>
+  </mat-toolbar>
+</div>
+
+<mat-action-list>
+  <ng-container>
+    <p>Número do pedido: {{ pedido.id}} </p>
+    <p>Data e hora pedido: {{ pedido.dataHora | date:'short'}}</p>
+    <p>Situação: {{pedido.situacao}} </p>
+  </ng-container>
+
+</mat-action-list>
+
+<app-lista-item [itens]="pedido.itens"></app-lista-item>
+
+<mat-toolbar-row>
+
+<a mat-button routerLink="/cardapio">Volta para Cardápio</a>
+</mat-toolbar-row>
